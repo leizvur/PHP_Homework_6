@@ -50,9 +50,9 @@ foreach ($test_array as $value)
 	<p>Если ты ответишь на все три теста правильно, знай, ты рожден в СССР.</p>
 	<form enctype="multipart/form-data" method="GET">
 		<label><strong>Выбери тест:</strong></label><br>
-		<input type="radio" name="mytest" value="0" checked>Политический тест<br><br>
-		<input type="radio" name="mytest" value="1">Литературный тест<br><br>
-		<input type="radio" name="mytest" value="2">Юмористический тест<br><br>
+		<input type="radio" name="mytest" value="1" checked>Политический тест<br><br>
+		<input type="radio" name="mytest" value="2">Литературный тест<br><br>
+		<input type="radio" name="mytest" value="3">Юмористический тест<br><br>
 		<input type="submit" formaction="test.php" name="RunTest" value="Пройти тест">
 	</form>
 	<p>Желаем удачи!</p>
