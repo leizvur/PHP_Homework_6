@@ -13,7 +13,7 @@ ini_set("display_errors", 1);
 
 //echo "<pre>";
 //var_dump($_GET);
-var_dump($_POST);
+//var_dump($_POST);
 //echo "</pre>";
 
 $test_number;
@@ -54,8 +54,17 @@ if ($test_number==="1")
 		<input type="radio" name="answer" value="a3"><?php echo $test1_array["TEST1_ANSWER_3"]?><Br><Br>
   		<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 		</form>
-	<?php 
+		<?php 
+		if ($_POST["answer"]==="a3") 
+			{
+				echo "Вы абсолютно правы!";
+			} 
+			else 
+			{
+				echo "Вы ошиблись, попробуйте еще раз!";
+			}
 	} 
+	
 	elseif ($test_number==="2") 
 		{
 			//echo "Второй тест";
@@ -71,9 +80,18 @@ if ($test_number==="1")
 			<input type="radio" name="answer" value="a3"><?php echo $test2_array["TEST2_ANSWER_3"]?><Br><Br>
   			<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 			</form>
-		<?php
+			<?php
+			if ($_POST["answer"]==="a2") 
+			{
+				echo "Вы абсолютно правы!";
 			} 
-			elseif ($test_number==="3")
+			else 
+			{
+				echo "Вы ошиблись, попробуйте еще раз!";
+			}
+			
+		}
+		elseif ($test_number==="3")
 			{
 				//echo "Третий тест";
 				$test3_content=file_get_contents("./uploaded/test3.json");
@@ -88,9 +106,19 @@ if ($test_number==="1")
 				<input type="radio" name="answer" value="a3"><?php echo $test3_array["TEST3_ANSWER_3"]?><Br><Br>
   				<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 				</form>
-			<?php
+				<?php
+				if ($_POST['answer']==="a1") 
+					{
+						
+						echo "Вы абсолютно правы!";
+
+					} 
+				else 
+					{
+						echo "Вы ошиблись, попробуйте еще раз!";
+					}
 			} 
-		else
+			else
 			{
 				echo "Выберите тест!";
 			}
