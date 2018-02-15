@@ -13,6 +13,7 @@ ini_set("display_errors", 1);
 
 //echo "<pre>";
 //var_dump($_GET);
+var_dump($_POST);
 //echo "</pre>";
 
 $test_number;
@@ -50,7 +51,7 @@ if ($test_number==="1")
 		<label><?php echo $test1_array["TEST1_QUESTION"]?></label><Br><Br>
 		<input type="radio" name="answer" value="a1"><?php echo $test1_array["TEST1_ANSWER_1"]?><Br>
 		<input type="radio" name="answer" value="a2"><?php echo $test1_array["TEST1_ANSWER_2"]?><Br>
-		<input type="radio" name="answer" value="a3><?php echo $test1_array["TEST1_ANSWER_3"]?><Br><Br>
+		<input type="radio" name="answer" value="a3"><?php echo $test1_array["TEST1_ANSWER_3"]?><Br><Br>
   		<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 		</form>
 	<?php 
