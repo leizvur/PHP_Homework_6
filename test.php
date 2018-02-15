@@ -25,9 +25,9 @@ $test3_array=[];
 if (isset($_GET["mytest"]) && !empty($_GET["mytest"])) 
 	{
 		$test_number=$_GET["mytest"];
-		echo "<pre>";
-		var_dump($test_number);
-		echo "</pre>";
+		//echo "<pre>";
+		//var_dump($test_number);
+		//echo "</pre>";
 	}
 	else 
 	{
@@ -40,12 +40,12 @@ $test_number;
 
 if ($test_number==="1") 
 	{
-		echo "Первый тест";
+		//echo "Первый тест";
 		$test1_content=file_get_contents("./uploaded/test1.json");
 		$test1_array=json_decode($test1_content, true);
-		echo "<pre>";
-		print_r($test1_array);
-		echo "</pre>"; ?>
+		//echo "<pre>";
+		//print_r($test1_array);
+		//echo "</pre>"; ?>
 		<form action="test.php?mytest=1" enctype="multipart/form-data" method="POST">
 		<label><?php echo $test1_array["TEST1_QUESTION"]?></label><Br><Br>
 		<input type="radio" name="answer" value="a1"><?php echo $test1_array["TEST1_ANSWER_1"]?><Br>
@@ -57,12 +57,12 @@ if ($test_number==="1")
 	} 
 	elseif ($test_number==="2") 
 		{
-			echo "Второй тест";
+			//echo "Второй тест";
 			$test2_content=file_get_contents("./uploaded/test2.json");
 			$test2_array=json_decode($test2_content, true);
-			echo "<pre>";
-			print_r($test2_array);
-			echo "</pre>"; ?>
+			//echo "<pre>";
+			//print_r($test2_array);
+			//echo "</pre>"; ?>
 			<form action="test.php?mytest=2" enctype="multipart/form-data" method="GET">
 			<label><?php echo $test2_array["TEST2_QUESTION"]?></label><Br><Br>
 			<input type="radio" name="answer" value="a1"><?php echo $test2_array["TEST2_ANSWER_1"]?><Br>
@@ -74,12 +74,12 @@ if ($test_number==="1")
 			} 
 			elseif ($test_number==="3")
 			{
-				echo "Третий тест";
+				//echo "Третий тест";
 				$test3_content=file_get_contents("./uploaded/test3.json");
 				$test3_array=json_decode($test3_content, true);
-				echo "<pre>";
-				print_r($test3_array);
-				echo "</pre>"; ?>
+				//echo "<pre>";
+				//print_r($test3_array);
+				//echo "</pre>"; ?>
 				<form action="test.php?mytest=3" enctype="multipart/form-data" method="GET">
 				<label><?php echo $test3_array["TEST3_QUESTION"]?></label><Br><Br>
 				<input type="radio" name="answer" value="a1"><?php echo $test3_array["TEST3_ANSWER_1"]?><Br>
