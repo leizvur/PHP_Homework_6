@@ -11,9 +11,9 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-echo "<pre>";
-var_dump($_GET);
-echo "</pre>";
+//echo "<pre>";
+//var_dump($_GET);
+//echo "</pre>";
 
 $test_number;
 $test1_array=[];
@@ -49,8 +49,8 @@ if ($test_number==="1")
 		<form action="test.php?mytest=1" enctype="multipart/form-data" method="POST">
 		<label><?php echo $test1_array["TEST1_QUESTION"]?></label><Br><Br>
 		<input type="radio" name="answer" value="a1"><?php echo $test1_array["TEST1_ANSWER_1"]?><Br>
-		<input type="radio" name="answer" value="a1"><?php echo $test1_array["TEST1_ANSWER_2"]?><Br>
-		<input type="radio" name="answer" value="a1"><?php echo $test1_array["TEST1_ANSWER_3"]?><Br><Br>
+		<input type="radio" name="answer" value="a2"><?php echo $test1_array["TEST1_ANSWER_2"]?><Br>
+		<input type="radio" name="answer" value="a3><?php echo $test1_array["TEST1_ANSWER_3"]?><Br><Br>
   		<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 		</form>
 	<?php 
@@ -63,11 +63,11 @@ if ($test_number==="1")
 			//echo "<pre>";
 			//print_r($test2_array);
 			//echo "</pre>"; ?>
-			<form action="test.php?mytest=2" enctype="multipart/form-data" method="GET">
+			<form action="test.php?mytest=2" enctype="multipart/form-data" method="POST">
 			<label><?php echo $test2_array["TEST2_QUESTION"]?></label><Br><Br>
 			<input type="radio" name="answer" value="a1"><?php echo $test2_array["TEST2_ANSWER_1"]?><Br>
-			<input type="radio" name="answer" value="a1"><?php echo $test2_array["TEST2_ANSWER_2"]?><Br>
-			<input type="radio" name="answer" value="a1"><?php echo $test2_array["TEST2_ANSWER_3"]?><Br><Br>
+			<input type="radio" name="answer" value="a2"><?php echo $test2_array["TEST2_ANSWER_2"]?><Br>
+			<input type="radio" name="answer" value="a3"><?php echo $test2_array["TEST2_ANSWER_3"]?><Br><Br>
   			<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 			</form>
 		<?php
@@ -80,11 +80,11 @@ if ($test_number==="1")
 				//echo "<pre>";
 				//print_r($test3_array);
 				//echo "</pre>"; ?>
-				<form action="test.php?mytest=3" enctype="multipart/form-data" method="GET">
+				<form action="test.php?mytest=3" enctype="multipart/form-data" method="POST">
 				<label><?php echo $test3_array["TEST3_QUESTION"]?></label><Br><Br>
 				<input type="radio" name="answer" value="a1"><?php echo $test3_array["TEST3_ANSWER_1"]?><Br>
-				<input type="radio" name="answer" value="a1"><?php echo $test3_array["TEST3_ANSWER_2"]?><Br>
-				<input type="radio" name="answer" value="a1"><?php echo $test3_array["TEST3_ANSWER_3"]?><Br><Br>
+				<input type="radio" name="answer" value="a2"><?php echo $test3_array["TEST3_ANSWER_2"]?><Br>
+				<input type="radio" name="answer" value="a3"><?php echo $test3_array["TEST3_ANSWER_3"]?><Br><Br>
   				<input type="submit" name="CheckTest" value="Проверить" title="Проверить">
 				</form>
 			<?php
